@@ -33,17 +33,18 @@ v0.3 ile Gemini gap analysis kontrollü şekilde entegre edildi. v0.3.1 yönünd
 
 M0-L01 P0 öğrenme deneyimi baseline'ı kabul edildi. M0-L02 final content candidate kabul edildi ve M0-L01 → M0-L02 two-lesson prototype baseline accepted. GitHub issue/workflow automation scaffolding oluşturuldu.
 
+Two-lesson prototype Vercel'e mobil test için deploy edildi. İlk Vercel build, generated dependency/build output tracking nedeniyle başarısız oldu; node_modules/dist Git tracking'den çıkarılıp .gitignore eklenerek/güncellenerek düzeltildi.
+
 Tam müfredat hâlâ üretilmedi. Vite + React mevcut prototip uygulama yığınıdır; final mimari karar değildir.
 
 ## Sıradaki Adım
 
-1. Vercel deployment hazırlığını yap.
-2. `checklists/mobile_test_checklist.md` ile gerçek mobil cihaz testi çalıştır.
-3. Sonra stack, content storage, progress tracking ve animation tekniği için ADR/architecture tartışmasını başlat.
+1. `checklists/mobile_test_checklist.md` ile gerçek mobil cihaz testi çalıştır.
+2. Sonra stack, hosting, content storage, progress tracking ve animation tekniği için ADR/architecture tartışmasını başlat.
 
-## Vercel Deploy Hazırlığı
+## Vercel Test Deploy Durumu
 
-Önerilen ilk deploy hedefi: Vercel Free/Hobby. Bu yalnızca prototipi paylaşılabilir hale getirmek içindir; Vite + React final mimari karar değildir.
+İki dersli prototip Vercel'e mobil test amacıyla yayınlandı. Bu yalnızca prototipi paylaşılabilir hale getirmek içindir; Vercel final hosting kararı değildir ve Vite + React final mimari karar değildir.
 
 - Install command: `npm install`
 - Build command: `npm run build`
@@ -59,5 +60,7 @@ Tekrarlanabilir AI çalışma akışı için şu iskeletler eklendi:
 - `prompts/`: Claude ve Codex için yeniden kullanılabilir görev promptları.
 - `checklists/`: lesson, visual animation, prototype, accessibility, depth ladder ve mobile test kontrol listeleri.
 - `workflows/`: lesson production, prototype integration ve AI handoff adımları.
+
+Batch Lesson Factory iskeleti de eklendi: 3 derslik paketler için `.github/ISSUE_TEMPLATE/lesson_batch.yml`, `prompts/08-11`, `checklists/batch_lesson_quality_checklist.md` ve `workflows/BATCH_LESSON_FACTORY_WORKFLOW.md` kullanılır. Batch akışı kalite kapısını atlamaz; D30 progressive depth korunur.
 
 Not: Bu iskeletler Vite + React'i final mimari kararı yapmaz; mevcut stack hâlâ prototip uygulama yığınıdır.

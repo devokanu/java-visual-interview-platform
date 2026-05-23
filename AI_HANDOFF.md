@@ -21,6 +21,9 @@ Minimal polish patch completed; build passed; M0-L01 → M0-L02 flow works; M0-L
 M0-L01 → M0-L02 two-lesson prototype baseline accepted. Mobile visual stage still needs real-device testing.
 GitHub issue/workflow automation scaffolding created.
 Vercel deployment preparation completed; actual deploy pending.
+Two-lesson prototype deployed to Vercel for mobile testing.
+Initial Vercel build failed due to generated dependency/build output tracking; fixed by removing node_modules/dist from Git tracking and adding/updating .gitignore.
+Batch lesson factory workflow scaffolding created.
 
 Kullanıcı Tarafından Onaylananlar (What Was Approved by the User)
 
@@ -47,9 +50,9 @@ v0.3: M27 Sistem Tasarımı Kuşak 6'da kalır; Kuşak 4 öncesi yalnızca köpr
 v0.3: GraalVM / Spring Native temel ön koşul değildir.
 
 Mevcut Görev (Current Task)
-Vercel deployment preparation completed; actual deploy pending. README deploy ayarları güncel; mobile test checklist gerçek cihaz doğrulamasına hazır.
-Sıradaki önerilen adım: Vercel deploy yapılması ve mobile test checklist ile gerçek cihaz doğrulaması. Mobil görsel sahne hâlâ gerçek cihaz testi gerektirir.
-Not: Vite + React şu an yalnızca prototip uygulama yığınıdır; final stack kararı açık kalır ve daha sonra ayrı ADR/DECISIONS turunda ele alınmalıdır.
+Two-lesson prototype deployed to Vercel for mobile testing. İlk Vercel build, generated dependency/build output tracking nedeniyle başarısız oldu; node_modules/dist Git tracking'den çıkarılıp .gitignore eklenerek/güncellenerek düzeltildi.
+Batch lesson factory workflow scaffolding created. Sıradaki önerilen adım: mobile test checklist ile gerçek cihaz doğrulaması ve ardından 3 derslik ilk batch issue'sunu açmak. Mobil görsel sahne hâlâ gerçek cihaz testi gerektirir.
+Not: Vercel test deploy final hosting kararı değildir. Vite + React şu an yalnızca prototip uygulama yığınıdır; final stack/hosting kararı açık kalır ve daha sonra ayrı ADR/DECISIONS turunda ele alınmalıdır.
 Gerekli Girdi Dosyaları (Required Input Files)
 
 PROJECT_CONTEXT.md (v0.3)
@@ -63,8 +66,8 @@ GAP_ANALYSIS (Gemini çıktısı, referans olarak — entegre edilmemiş öneril
 
 Beklenen Çıktı (Expected Output)
 
-Şimdi: Vercel deploy'u yapmadan önce son ayarları kontrol et ve deploy'u kullanıcı onayıyla başlat.
-Sonra: mobile test checklist ile mobil görsel sahneyi gerçek cihazlarda doğrula.
+Şimdi: mobile test checklist ile mobil görsel sahneyi gerçek cihazlarda doğrula.
+Sonra: Batch Lesson Factory ile 3 derslik ilk üretim issue'sunu aç; stack, hosting, content storage, progress tracking ve animation kararlarını ayrı ADR/architecture turunda ele al.
 Yapılmayacak: Yeni ders eklemek, tam müfredat üretmek, ADR başlatmak veya final stack kararıymış gibi Vite + React'i kalıcılaştırmak.
 
 Kısıtlar (Constraints)

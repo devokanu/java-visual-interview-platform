@@ -59,9 +59,9 @@ Onaylanmış Müfredat Yönü (Approved Curriculum Direction)
 Bkz. CURRICULUM_BLUEPRINT.md (v0.3'te Gemini boşluk analizinden seçilmiş eklemeler entegre edildi: CQRS/Event Sourcing, ileri DB iç yapıları, OIDC/SAML/RBAC/ABAC, gRPC/WebSocket, FinOps, opsiyonel GraalVM/Spring Native, Kuşak 4 öncesi mini sistem tasarımı köprüsü, M9/M10 sıra düzeltmesi). Şimdilik yalnızca üst düzey modül grupları ve ön koşul mantığı onaylandı. Tam ders dökümü henüz yapılmadı.
 Şu An Üzerinde Çalışılan Modül / Ders (Current Module / Lesson)
 
-Aşama: M0-L01 → M0-L02 baseline sonrası deploy hazırlığı.
-Durum: GitHub issue/workflow automation scaffolding created. Vercel deployment preparation completed; actual deploy pending. Mobil görsel sahne hâlâ gerçek cihaz testi gerektirir.
-Sıradaki: Vercel deploy yapılması ve mobile test checklist ile gerçek cihaz doğrulaması.
+Aşama: M0-L01 → M0-L02 baseline sonrası Vercel mobil test yayını.
+Durum: Two-lesson prototype deployed to Vercel for mobile testing. İlk Vercel build, generated dependency/build output tracking nedeniyle başarısız oldu; node_modules/dist Git tracking'den çıkarılıp .gitignore eklenerek/güncellenerek düzeltildi. Mobil görsel sahne hâlâ gerçek cihaz testi gerektirir.
+Sıradaki: mobile test checklist ile gerçek cihaz doğrulaması.
 
 Görsel ve Animasyon Kuralları (Visual and Animation Rules)
 Bkz. VISUAL_ANIMATION_SYSTEM.md (v0.3'te modül-grubu metaforları "başlangıç noktası" olarak çerçevelendi; her konu yine kendi özgün görseliyle ele alınır). Özet: jenerik şablon yasak; her konuya özgün görsel metafor; kod gösterilirken görsel ile senkron; görsel sahne ana öğretim alanıdır, süs değildir.
@@ -171,11 +171,13 @@ M0-L02 final content candidate integrated into prototype.
 M0-L01 → M0-L02 two-lesson prototype baseline accepted; minimal polish patch tamamlandı ve build geçti.
 GitHub issue/workflow automation scaffolding created.
 Vercel deployment preparation completed; actual deploy pending.
+Two-lesson prototype deployed to Vercel for mobile testing.
+Initial Vercel build failed due to generated dependency/build output tracking; fixed by removing node_modules/dist from Git tracking and adding/updating .gitignore.
+Batch lesson factory workflow scaffolding created.
 17.2 Bekleyenler (Pending — sırada, engel yok)
 v0.3 dosyaları arası iç tutarlılık ikinci-tur kontrolü.
 README'nin SOURCE_INGESTION.md ile güncellenmesi (gerekirse).
 M0-L01 P0 baseline'ın hedef öğrenciyle veya temsilî kullanıcıyla deneyim kontrolü.
-Vercel deploy yapılması.
 Mobil görsel sahnenin mobile test checklist ile gerçek cihazlarda test edilmesi.
 17.3 Engelli / Açık (Blocked / Open — karar bekliyor)
 Teknik yığın kararı (O1) → final mimari/ADR turunu bekliyor; Vite + React yalnızca prototip uygulama yığınıdır.
@@ -187,8 +189,9 @@ Soft-check kademe sayısı (O7).
 
 Sıradaki Eylemler (Next Actions)
 
-Vercel deploy yap; stack kararını finalleştirme.
 Mobile test checklist ile mobil görsel sahneyi gerçek cihazlarda doğrula.
+Batch lesson factory workflow ile siradaki 3 derslik paketi issue tabanli hazirla; kalite review kapisini atlama.
+Actual hosting/stack decisions remain open for later ADR; Vercel test deploy final hosting kararı değildir.
 Tam müfredat üretme; yeni ders ekleme; ADR/stack kararını ayrı turda ele al.
 
 Bağlam Tazeleme Özeti (Context Refresh Summary)
@@ -196,6 +199,6 @@ Bağlam Tazeleme Özeti (Context Refresh Summary)
 Son Güncelleyen / Tarih (Last Updated By / Date)
 
 Güncelleyen: Codex GPT-5.5 (Uygulama/Prototip)
-Sürüm: v0.3 + Vercel deployment preparation note
-Tarih: 2026-05-23 (Vercel deployment preparation completed; actual deploy pending)
+Sürüm: v0.3 + batch lesson factory scaffolding note
+Tarih: 2026-05-23 (Batch lesson factory workflow scaffolding created)
 Not: Her anlamlı işten sonra bu alan güncellenmeli.

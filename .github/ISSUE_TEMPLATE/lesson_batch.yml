@@ -1,0 +1,140 @@
+name: Lesson Batch
+description: 3 derslik kontrollu lesson factory batch uretimi
+title: "[Lesson Batch] M__ batch - "
+labels: ["lesson", "batch", "ai-workflow"]
+body:
+  - type: input
+    id: ai_owner
+    attributes:
+      label: AI Owner
+      description: Ornek: Claude, Gemini, Codex
+      placeholder: Claude
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: Bu batch hangi 3 derslik paketi hedefliyor?
+      placeholder: "M0 icinde siradaki 3 ders icin final content candidate uret."
+    validations:
+      required: true
+  - type: textarea
+    id: context_files
+    attributes:
+      label: Context Files
+      value: |
+        - PROJECT_CONTEXT.md
+        - AI_HANDOFF.md
+        - DECISIONS.md
+        - CURRICULUM_BLUEPRINT.md
+        - LESSON_TEMPLATE.md
+        - VISUAL_ANIMATION_SYSTEM.md
+        - INTERVIEW_SYSTEM.md
+        - SOURCE_INGESTION.md
+        - prompts/08_generate_lesson_batch.md
+        - checklists/batch_lesson_quality_checklist.md
+        - workflows/BATCH_LESSON_FACTORY_WORKFLOW.md
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Inputs
+      description: Tam olarak 3 lesson brief gir. Her brief kisa ve sinirli olmali.
+      value: |
+        Batch size: 3
+
+        Lesson 1:
+        - Module:
+        - Lesson code:
+        - Lesson title:
+        - Previous lesson:
+        - Required metaphor:
+        - Must bridge to:
+        - Special constraints:
+
+        Lesson 2:
+        - Module:
+        - Lesson code:
+        - Lesson title:
+        - Previous lesson:
+        - Required metaphor:
+        - Must bridge to:
+        - Special constraints:
+
+        Lesson 3:
+        - Module:
+        - Lesson code:
+        - Lesson title:
+        - Previous lesson:
+        - Required metaphor:
+        - Must bridge to:
+        - Special constraints:
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      value: |
+        - Tam mufredat uretme.
+        - Batch disina cikma.
+        - Yeni ders sayisini 3 ile sinirla.
+        - D30'u koru: bilissel erisilebilirlik icerik siglastirma degil, progressive depth design'dir.
+        - Her ders LESSON_TEMPLATE v0.3.1'e uymali.
+        - Her dersin gorsel metaforu konuya ozel olmali; jenerik diyagram yok.
+        - Soft-check kullan; hard-lock kullanma.
+        - Kalite kapisi atlanamaz: review ve patch gerekiyorsa ayrica yapilir.
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Task
+      value: |
+        1. 3 derslik lesson batch uret.
+        2. Her ders icin LESSON_TEMPLATE alanlarini doldur.
+        3. Her ders icin Depth Ladder, visual specification, code sync, interview, rescue ve soft-check ekle.
+        4. Batch sonunda dersler arasi on kosul akisini ve metafor tekrarini kontrol et.
+    validations:
+      required: true
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of Done
+      value: |
+        - Tam olarak 3 ders uretildi.
+        - Batch disina cikilmadi.
+        - Her ders D30 progressive depth tasarimina uyuyor.
+        - Her dersin metaforu konuya ozel.
+        - Dersler arasi on kosul sirasi net.
+        - Micro-assessment ve soft-check var.
+        - Review icin Pass / Patch Needed / Reject karari verilebilir durumda.
+        - App kodu veya src/ degismedi.
+    validations:
+      required: true
+  - type: textarea
+    id: output_required
+    attributes:
+      label: Output Required
+      value: |
+        Turkce batch raporu:
+        1. Uretilen 3 ders
+        2. Her dersin metaforu
+        3. Depth Ladder ozeti
+        4. On kosul / bridge ozeti
+        5. Review icin acik riskler
+    validations:
+      required: true
+  - type: dropdown
+    id: memory_update
+    attributes:
+      label: Memory Update Required?
+      options:
+        - "Hayir"
+        - "Evet: PROJECT_CONTEXT.md"
+        - "Evet: PROJECT_CONTEXT.md + AI_HANDOFF.md"
+        - "Evet: PROJECT_CONTEXT.md + AI_HANDOFF.md + DECISIONS.md"
+    validations:
+      required: true
