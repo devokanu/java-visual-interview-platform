@@ -230,6 +230,39 @@ function DepthLadder({ items }) {
 }
 
 function VisualStage({ lesson, step, activeStep, replayKey }) {
+  if (lesson.visualType === "commandBoard") {
+    return (
+      <CommandBoardStage
+        lesson={lesson}
+        step={step}
+        activeStep={activeStep}
+        replayKey={replayKey}
+      />
+    );
+  }
+
+  if (lesson.visualType === "memoryBoxes") {
+    return (
+      <MemoryBoxesStage
+        lesson={lesson}
+        step={step}
+        activeStep={activeStep}
+        replayKey={replayKey}
+      />
+    );
+  }
+
+  if (lesson.visualType === "recipeError") {
+    return (
+      <RecipeErrorStage
+        lesson={lesson}
+        step={step}
+        activeStep={activeStep}
+        replayKey={replayKey}
+      />
+    );
+  }
+
   if (lesson.visualType === "robot") {
     return (
       <RobotStage
@@ -290,6 +323,177 @@ function VisualStage({ lesson, step, activeStep, replayKey }) {
           <span />
         </div>
         <span className="zone-caption">server / backend</span>
+      </div>
+    </section>
+  );
+}
+
+function CommandBoardStage({ lesson, step, activeStep, replayKey }) {
+  const stageClass = `visual-stage replay-pulse command-board-stage board-step-${activeStep + 1}`;
+
+  return (
+    <section
+      className={stageClass}
+      aria-label={`Aydınlatmalı komut panosu sahnesi. ${step.stageLabel}`}
+      data-replay-key={replayKey}
+      role="img"
+    >
+      <div className="board-zone operator-zone">
+        <p className="zone-title">Operatör</p>
+        <div className="person operator" aria-hidden="true">
+          <span className="head" />
+          <span className="body" />
+        </div>
+        <button className="start-button" type="button" tabIndex={-1} aria-hidden="true">
+          Başlat
+        </button>
+      </div>
+
+      <div className="board-zone command-panel-zone">
+        <p className="zone-title">Komut panosu</p>
+        <ol className="board-commands" aria-label="Komut panosu satırları">
+          {lesson.boardCommands.map((command, index) => (
+            <li
+              key={command}
+              className={
+                step.activeCommand === index ? "board-command active-command" : "board-command"
+              }
+            >
+              <span className="lamp" aria-hidden="true" />
+              <span className="command-text">{command}</span>
+              {step.pointer === index + 1 ? (
+                <span className="pointer" aria-hidden="true">➜</span>
+              ) : null}
+            </li>
+          ))}
+        </ol>
+        {step.pointer === 0 || step.pointer === 4 ? (
+          <span className={`pointer outside pointer-${step.pointer}`} aria-hidden="true">
+            ➜
+          </span>
+        ) : null}
+      </div>
+
+      <div className="board-zone action-zone">
+        <p className="zone-title">Eylem</p>
+        <div className={`action-device action-${activeStep + 1}`} aria-hidden="true">
+          <span className="device-light" />
+          <span className="device-motor" />
+          <span className="device-door" />
+        </div>
+        <span className="zone-caption">{step.action}</span>
+      </div>
+    </section>
+  );
+}
+
+function MemoryBoxesStage({ lesson, step, activeStep, replayKey }) {
+  const values = step.values ?? {};
+  const stageClass = `visual-stage replay-pulse memory-stage memory-step-${activeStep + 1}`;
+
+  return (
+    <section
+      className={stageClass}
+      aria-label={`Etiketli saklama kutuları sahnesi. ${step.stageLabel}`}
+      data-replay-key={replayKey}
+      role="img"
+    >
+      <div className="memory-zone teacher-zone">
+        <p className="zone-title">Kod kartı</p>
+        <div className="teacher-card" aria-hidden="true">
+          {step.command}
+        </div>
+      </div>
+
+      <div className="memory-zone boxes-zone">
+        <p className="zone-title">Bellek</p>
+        <div className="storage-shelf" aria-label="Etiketli bellek kutuları">
+          {lesson.boxes.map((box) => (
+            <div
+              key={box}
+              className={
+                step.activeBox === box || step.activeBox === "all"
+                  ? "storage-box active-box"
+                  : "storage-box"
+              }
+            >
+              <span className="box-label">{box}</span>
+              <span className={values[box] ? "value-card filled" : "value-card"}>
+                {values[box] || "boş"}
+              </span>
+            </div>
+          ))}
+        </div>
+        {activeStep === 5 ? <div className="trash-bin" aria-hidden="true">Ahmet</div> : null}
+      </div>
+
+      <div className="memory-zone output-zone">
+        <p className="zone-title">Çıktı ekranı</p>
+        <div className="output-screen" aria-hidden="true">
+          {step.output || "bekliyor"}
+        </div>
+        {step.activeBox === "all" ? (
+          <div className="memory-link" aria-hidden="true">
+            KOD → BELLEK → VERİ
+          </div>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
+function RecipeErrorStage({ lesson, step, activeStep, replayKey }) {
+  const stageClass = `visual-stage replay-pulse recipe-stage recipe-step-${activeStep + 1} scene-${step.scene}`;
+
+  return (
+    <section
+      className={stageClass}
+      aria-label={`Eksik adımlı tarif kartı ve yapışkan not panosu sahnesi. ${step.stageLabel}`}
+      data-replay-key={replayKey}
+      role="img"
+    >
+      <div className="recipe-zone chef-zone">
+        <p className="zone-title">Aşçı</p>
+        <div className="chef" aria-hidden="true">
+          <span className="chef-hat" />
+          <span className="head" />
+          <span className="body" />
+        </div>
+        <span className="zone-caption">sakin yürütücü</span>
+      </div>
+
+      <div className="recipe-zone recipe-card-zone">
+        <p className="zone-title">Tarif kartı</p>
+        <ol className="recipe-card" aria-label="Tarif satırları">
+          {lesson.recipeLines.map((line, index) => (
+            <li
+              key={line}
+              className={step.activeLine === index + 1 ? "recipe-line active-recipe-line" : "recipe-line"}
+            >
+              {line}
+            </li>
+          ))}
+        </ol>
+        <div className="sticky-board" aria-label="Yapışkan not panosu">
+          {step.note ? <span className="sticky-note">{step.note}</span> : <span>not bekliyor</span>}
+        </div>
+      </div>
+
+      <div className="recipe-zone kitchen-status-zone">
+        <p className="zone-title">Mutfak</p>
+        <div className="kitchen-mini" aria-hidden="true">
+          <span className="pot" />
+          <span className="salt" />
+          <span className="taste-cup" />
+        </div>
+        <span className="zone-caption">{step.kitchen}</span>
+        {step.scene === "summary" ? (
+          <div className="error-summary" aria-hidden="true">
+            <span>SYNTAX</span>
+            <span>RUNTIME</span>
+            <span>LOGIC</span>
+          </div>
+        ) : null}
       </div>
     </section>
   );

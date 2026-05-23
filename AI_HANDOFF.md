@@ -26,6 +26,7 @@ Initial Vercel build failed due to generated dependency/build output tracking; f
 Batch lesson factory workflow scaffolding created.
 Backlog-driven batch cursor system created.
 Shared AI orchestration board created to reduce GitHub issue overhead.
+M0-B01 integrated and QA passed; cursor advanced to next batch.
 
 Kullanıcı Tarafından Onaylananlar (What Was Approved by the User)
 
@@ -52,9 +53,9 @@ v0.3: M27 Sistem Tasarımı Kuşak 6'da kalır; Kuşak 4 öncesi yalnızca köpr
 v0.3: GraalVM / Spring Native temel ön koşul değildir.
 
 Mevcut Görev (Current Task)
-Two-lesson prototype deployed to Vercel for mobile testing. İlk Vercel build, generated dependency/build output tracking nedeniyle başarısız oldu; node_modules/dist Git tracking'den çıkarılıp .gitignore eklenerek/güncellenerek düzeltildi.
-Batch lesson factory workflow scaffolding created. Backlog-driven batch cursor system created. Sıradaki önerilen adım: mobile test checklist ile gerçek cihaz doğrulaması ve ardından BATCH_CURSOR.md içindeki M0-L03, M0-L04, M0-L05 için ilk içerik batch'ini açmak. Mobil görsel sahne hâlâ gerçek cihaz testi gerektirir.
-Küçük AI handoff adımlarında GitHub issue açmadan önce AI_ORCHESTRATION_BOARD.md kullanılmalıdır; mevcut board Claude'a M0-B01 Markdown cleanup görevini atar.
+M0-B01 integrated and QA passed; cursor advanced to next batch.
+BATCH_CURSOR.md artık M1-L01, M1-L02, M1-L03 içerik üretimini aktif batch olarak gösterir. Mobil görsel sahne hâlâ gerçek cihaz testi gerektirir.
+Küçük AI handoff adımlarında GitHub issue açmadan önce AI_ORCHESTRATION_BOARD.md kullanılmalıdır; mevcut board sonraki görev statüsüne göre güncellenmelidir.
 Not: Vercel test deploy final hosting kararı değildir. Vite + React şu an yalnızca prototip uygulama yığınıdır; final stack/hosting kararı açık kalır ve daha sonra ayrı ADR/DECISIONS turunda ele alınmalıdır.
 Gerekli Girdi Dosyaları (Required Input Files)
 
@@ -69,8 +70,8 @@ GAP_ANALYSIS (Gemini çıktısı, referans olarak — entegre edilmemiş öneril
 
 Beklenen Çıktı (Expected Output)
 
-Şimdi: AI_ORCHESTRATION_BOARD.md üzerindeki Claude cleanup görevinin tamamlanmasını bekle veya ilgili AI'a devret.
-Sonra: Clean batch onaylanırsa Codex lesson storage ve backlog/cursor status update adımına geçer; stack, hosting, content storage, progress tracking ve animation kararlarını ayrı ADR/architecture turunda ele al.
+Şimdi: AI_ORCHESTRATION_BOARD.md sonraki aktif batch üretimi için Claude'a atanacak şekilde güncellenebilir.
+Sonra: Claude, yalnızca BATCH_CURSOR.md içindeki M1-L01, M1-L02, M1-L03 dersleri için içerik batch'i üretir; stack, hosting, content storage, progress tracking ve animation kararlarını ayrı ADR/architecture turunda ele al.
 Yapılmayacak: Yeni ders eklemek, tam müfredat üretmek, ADR başlatmak veya final stack kararıymış gibi Vite + React'i kalıcılaştırmak.
 
 Kısıtlar (Constraints)

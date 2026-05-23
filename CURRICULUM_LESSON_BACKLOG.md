@@ -10,9 +10,9 @@ Status değerleri: DONE, READY, BACKLOG, CONTENT_DONE, REVIEW_NEEDED, APPROVED, 
 |---|---|---|---|---|
 | M0-L01 | Bilgisayar, Program ve Backend Nedir? | M0 - Bilgisayar ve Program Nedir? | INTEGRATED | P0 baseline, Vercel mobile test yayınına dahil |
 | M0-L02 | Program Nedir? Komut ve Tarif Mantığı | M0 - Bilgisayar ve Program Nedir? | INTEGRATED | Two-lesson baseline içinde |
-| M0-L03 | Bilgisayar Komutları Nasıl Çalıştırır? | M0 - Bilgisayar ve Program Nedir? | APPROVED | M0-B01 approved for storage; not integrated |
-| M0-L04 | Kod, Veri ve Bellek Arasındaki İlk Bağ | M0 - Bilgisayar ve Program Nedir? | APPROVED | M0-B01 approved for storage; not integrated |
-| M0-L05 | Hata Nedir? Bilgisayar Neden Beklenmeyen Şey Yapar? | M0 - Bilgisayar ve Program Nedir? | APPROVED | M0-B01 approved for storage; not integrated |
+| M0-L03 | Bilgisayar Komutları Nasıl Çalıştırır? | M0 - Bilgisayar ve Program Nedir? | QA_DONE | M0-B01 integrated and QA passed |
+| M0-L04 | Kod, Veri ve Bellek Arasındaki İlk Bağ | M0 - Bilgisayar ve Program Nedir? | QA_DONE | M0-B01 integrated and QA passed |
+| M0-L05 | Hata Nedir? Bilgisayar Neden Beklenmeyen Şey Yapar? | M0 - Bilgisayar ve Program Nedir? | QA_DONE | M0-B01 integrated and QA passed |
 | M1-L01 | Java Dosyası ve main Mantığı | M1 - Java Dili Temelleri | BACKLOG | M0 sonrası |
 | M1-L02 | Değişkenler ve Tipler | M1 - Java Dili Temelleri | BACKLOG | Temel syntax |
 | M1-L03 | String, Sayı ve Boolean | M1 - Java Dili Temelleri | BACKLOG | Tip sezgisi |

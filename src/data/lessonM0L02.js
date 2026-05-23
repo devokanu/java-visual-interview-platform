@@ -135,8 +135,8 @@ export const lessonM0L02 = {
       "Hiç sorun yok. Bilgisayar komutları sırayla uygular ve kendi başına anlam çıkarmaz. İstersen devam edebilir ya da tekrar izleyebilirsin.",
   },
   nextStep: {
-    type: "placeholder",
-    message: "M0-L03 henüz üretilmedi. Şimdilik burada durabilirsin.",
+    type: "lesson",
+    targetLessonId: "m0-l03",
   },
   tabs: [
     {

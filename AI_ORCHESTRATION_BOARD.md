@@ -4,7 +4,7 @@ Bu dosya Claude, Gemini ve Codex arasında küçük yerel devirleri koordine etm
 
 ## Current Milestone
 
-M0-B01 approved content storage and backlog/cursor update.
+M0-B01 integration completed; update backlog/cursor and prepare next batch.
 
 ## Active Batch
 
@@ -14,7 +14,7 @@ M0-B01 approved content storage and backlog/cursor update.
 
 ## Current Task
 
-Store approved M0-B01 clean lesson content into stable lesson content files and update backlog/cursor status.
+Update backlog and cursor after M0-B01 QA_PASS.
 
 ## Assigned AI
 
@@ -22,8 +22,7 @@ Codex
 
 ## Input Sources
 
-- content/batches/M0-B01_CLEAN.md
-- content/batches/M0-B01_CLEAN_REVIEW.md
+- content/batches/M0-B01_INTEGRATION_QA.md
 - CURRICULUM_LESSON_BACKLOG.md
 - BATCH_CURSOR.md
 - PROJECT_CONTEXT.md
@@ -31,38 +30,37 @@ Codex
 
 ## Output Target
 
-- content/lessons/m0/M0-L03.md
-- content/lessons/m0/M0-L04.md
-- content/lessons/m0/M0-L05.md
 - updated CURRICULUM_LESSON_BACKLOG.md
 - updated BATCH_CURSOR.md
+- updated PROJECT_CONTEXT.md
+- updated AI_HANDOFF.md
 
 ## Rules / Do Not Do
 
-- Do not rewrite lesson meaning.
-- Do not change lesson IDs or titles.
-- Do not generate new lessons.
-- Do not modify `src/`.
-- Do not integrate into prototype yet.
-- Only split/store approved Markdown and update backlog/cursor status.
-- Set M0-L03, M0-L04, M0-L05 status to APPROVED or CONTENT_APPROVED according to existing backlog status conventions.
-- Move BATCH_CURSOR phase to READY_FOR_INTEGRATION.
-- Do not advance cursor to the next batch yet; cursor advances only after prototype integration + QA.
+- Do not modify src/.
+- Do not generate new lesson content.
+- Do not start next batch generation.
+- Do not update DECISIONS.md unless absolutely necessary.
+- Mark M0-L03, M0-L04, M0-L05 as INTEGRATED / QA_DONE according to existing backlog status conventions.
+- Advance BATCH_CURSOR to the next 3 lessons only after marking M0-B01 completed.
+- Keep batch size 3.
+- Current phase after update should be CONTENT_GENERATION for the next batch.
 - Preserve D30: Cognitive accessibility is not content simplification; it is progressive depth design.
 - Do not start ADR.
 - Do not deploy.
 
 ## Review Status
 
-APPROVE_FOR_STORAGE.
+M0-B01 integration QA_PASS.
 
-- M0-L03: PASS.
-- M0-L04: PASS.
-- M0-L05: PASS.
+- Build passed.
+- M0-L01 → M0-L05 flow works.
+- Code tab rule preserved.
+- Soft-check preserved.
 
 ## Next Action
 
-After storage is complete, Codex will integrate M0-B01 into the prototype in a separate task.
+After cursor update, next AI task will be Claude generating the next active batch from backlog/cursor.
 
 ## Status Values
 

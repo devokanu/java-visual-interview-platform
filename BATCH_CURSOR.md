@@ -2,13 +2,13 @@
 
 Batch size: 3
 
-Current phase: READY_FOR_INTEGRATION
+Current phase: CONTENT_GENERATION
 
 Next batch:
 
-- M0-L03
-- M0-L04
-- M0-L05
+- M1-L01
+- M1-L02
+- M1-L03
 
 ## Cursor Rule
 

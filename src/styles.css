@@ -850,6 +850,459 @@ blockquote {
   outline-offset: -4px;
 }
 
+.command-board-stage,
+.memory-stage,
+.recipe-stage {
+  grid-template-columns: 1fr 1.12fr 1fr;
+}
+
+.board-zone,
+.memory-zone,
+.recipe-zone {
+  position: relative;
+  min-width: 0;
+  padding: 58px 18px 18px;
+}
+
+.operator-zone,
+.teacher-zone,
+.chef-zone {
+  background: linear-gradient(180deg, rgba(230, 244, 239, 0.75), rgba(255, 255, 255, 0));
+}
+
+.command-panel-zone,
+.boxes-zone,
+.recipe-card-zone {
+  border-left: 1px dashed #b5c1cf;
+  border-right: 1px dashed #b5c1cf;
+}
+
+.action-zone,
+.output-zone,
+.kitchen-status-zone {
+  background: linear-gradient(180deg, rgba(234, 240, 249, 0.78), rgba(255, 255, 255, 0));
+}
+
+.start-button {
+  position: absolute;
+  left: 50%;
+  top: 270px;
+  min-height: 38px;
+  transform: translateX(-50%);
+  border-color: #91c9b8;
+  background: #f4fbf8;
+  color: #1c5c49;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+.board-commands {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 96px;
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.board-command {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 12px;
+  background: white;
+  color: #1b2430;
+  font-weight: 900;
+  box-shadow: 0 10px 22px rgba(27, 36, 48, 0.08);
+}
+
+.lamp {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #8a98ad;
+  border-radius: 50%;
+  background: #eef2f7;
+}
+
+.active-command {
+  border-color: var(--gold);
+  background: #fff8dc;
+}
+
+.active-command .lamp {
+  border-color: #d99a00;
+  background: var(--gold);
+  box-shadow: 0 0 0 6px rgba(245, 197, 66, 0.22);
+}
+
+.pointer {
+  position: absolute;
+  left: -34px;
+  color: #2457d6;
+  font-size: 1.45rem;
+  font-weight: 900;
+}
+
+.pointer.outside {
+  left: 20px;
+  border-radius: 999px;
+  padding: 2px 8px;
+  background: #eaf1ff;
+}
+
+.pointer-0 {
+  top: 74px;
+}
+
+.pointer-4 {
+  bottom: 46px;
+}
+
+.action-device {
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  display: grid;
+  gap: 14px;
+  width: 150px;
+  transform: translate(-50%, -50%);
+  justify-items: center;
+}
+
+.device-light {
+  width: 58px;
+  height: 58px;
+  border: 4px solid #52647a;
+  border-radius: 50%;
+  background: #eef2f7;
+}
+
+.device-motor {
+  width: 82px;
+  height: 34px;
+  border-radius: 999px;
+  background: #8795ad;
+}
+
+.device-door {
+  width: 64px;
+  height: 78px;
+  border: 4px solid #52647a;
+  border-radius: 8px 8px 2px 2px;
+  background: #f9fbfd;
+}
+
+.board-step-3 .device-light,
+.board-step-8 .device-light {
+  background: #fff3bd;
+  box-shadow: 0 0 24px rgba(245, 197, 66, 0.72);
+}
+
+.board-step-5 .device-motor {
+  background: #2457d6;
+  box-shadow: inset 18px 0 0 rgba(255, 255, 255, 0.24);
+}
+
+.board-step-6 .device-light {
+  background: #506074;
+}
+
+.board-step-1 .operator-zone,
+.board-step-2 .command-panel-zone,
+.board-step-3 .action-zone,
+.board-step-4 .command-panel-zone,
+.board-step-5 .action-zone,
+.board-step-6 .action-zone,
+.board-step-7 .command-panel-zone,
+.board-step-8 .command-panel-zone {
+  outline: 4px solid rgba(245, 197, 66, 0.42);
+  outline-offset: -4px;
+}
+
+.teacher-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(190px, 76%);
+  transform: translate(-50%, -50%);
+  border: 2px solid #2457d6;
+  border-radius: 8px;
+  padding: 16px;
+  background: white;
+  color: #122449;
+  font-weight: 900;
+  text-align: center;
+  box-shadow: 0 10px 22px rgba(36, 87, 214, 0.14);
+}
+
+.storage-shelf {
+  position: absolute;
+  left: 11%;
+  right: 11%;
+  top: 102px;
+  display: grid;
+  gap: 16px;
+}
+
+.storage-box {
+  min-height: 98px;
+  border: 3px solid #8795ad;
+  border-radius: 8px;
+  padding: 12px;
+  background: #f9fbfd;
+  box-shadow: inset 0 -10px 0 rgba(27, 36, 48, 0.04);
+}
+
+.active-box {
+  border-color: var(--gold);
+  background: #fff8dc;
+}
+
+.box-label,
+.value-card {
+  display: block;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-weight: 900;
+}
+
+.box-label {
+  width: max-content;
+  background: #dbe8ff;
+  color: #183c96;
+}
+
+.value-card {
+  margin-top: 12px;
+  background: white;
+  color: #8795ad;
+  text-align: center;
+}
+
+.value-card.filled {
+  color: #1c5c49;
+  background: #f3faf7;
+}
+
+.trash-bin {
+  position: absolute;
+  right: 16px;
+  bottom: 42px;
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #f8ece4;
+  color: #7d3b2b;
+  font-weight: 900;
+  text-decoration: line-through;
+}
+
+.output-screen {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  display: grid;
+  width: min(190px, 76%);
+  min-height: 86px;
+  transform: translate(-50%, -50%);
+  place-items: center;
+  border: 3px solid #91c9b8;
+  border-radius: 8px;
+  background: #121826;
+  color: #e8f7f0;
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.memory-link {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 78px;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff8dc;
+  color: #5a4100;
+  text-align: center;
+  font-weight: 900;
+}
+
+.memory-step-1 .teacher-zone,
+.memory-step-2 .boxes-zone,
+.memory-step-3 .boxes-zone,
+.memory-step-4 .output-zone,
+.memory-step-5 .output-zone,
+.memory-step-6 .boxes-zone,
+.memory-step-7 .output-zone,
+.memory-step-8 .boxes-zone {
+  outline: 4px solid rgba(245, 197, 66, 0.42);
+  outline-offset: -4px;
+}
+
+.chef {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 110px;
+  height: 170px;
+  transform: translate(-50%, -50%);
+}
+
+.chef-hat {
+  position: absolute;
+  z-index: 2;
+  left: 22px;
+  top: -22px;
+  width: 64px;
+  height: 38px;
+  border: 3px solid #2f4056;
+  border-radius: 24px 24px 10px 10px;
+  background: white;
+}
+
+.chef .head {
+  left: 30px;
+  top: 10px;
+}
+
+.chef .body {
+  left: 20px;
+  top: 66px;
+  background: #5c728d;
+}
+
+.recipe-card {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 86px;
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 14px;
+  border: 2px solid #d6b36a;
+  border-radius: 8px;
+  background: #fffaf0;
+}
+
+.recipe-line {
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: white;
+  color: #38485c;
+  font-weight: 800;
+}
+
+.active-recipe-line {
+  background: #fff3bd;
+  color: #5a4100;
+  box-shadow: inset 4px 0 0 var(--gold);
+}
+
+.sticky-board {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 36px;
+  min-height: 70px;
+  border: 2px dashed #d9c77a;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fffdf7;
+  color: #6b5a22;
+  font-weight: 800;
+}
+
+.sticky-note {
+  display: block;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff3bd;
+  color: #5a4100;
+}
+
+.kitchen-mini {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  display: grid;
+  gap: 12px;
+  transform: translate(-50%, -50%);
+  justify-items: center;
+}
+
+.pot {
+  width: 96px;
+  height: 58px;
+  border: 4px solid #52647a;
+  border-radius: 10px 10px 24px 24px;
+  background: #dbe8ff;
+}
+
+.salt {
+  width: 34px;
+  height: 48px;
+  border: 3px solid #52647a;
+  border-radius: 8px;
+  background: white;
+}
+
+.taste-cup {
+  width: 58px;
+  height: 28px;
+  border-radius: 4px 4px 20px 20px;
+  background: #f5c542;
+}
+
+.scene-runtime .salt {
+  background: #f8ece4;
+}
+
+.scene-logic .taste-cup {
+  background: #f5c542;
+  box-shadow: 0 0 0 6px rgba(196, 82, 58, 0.14);
+}
+
+.error-summary {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 74px;
+  display: grid;
+  gap: 8px;
+}
+
+.error-summary span {
+  border-radius: 8px;
+  padding: 8px;
+  background: #f3faf7;
+  color: #1c4a3c;
+  text-align: center;
+  font-weight: 900;
+}
+
+.recipe-step-1 .recipe-card-zone,
+.recipe-step-2 .chef-zone,
+.recipe-step-3 .recipe-card-zone,
+.recipe-step-4 .recipe-card-zone,
+.recipe-step-5 .kitchen-status-zone,
+.recipe-step-6 .kitchen-status-zone,
+.recipe-step-7 .recipe-card-zone,
+.recipe-step-8 .kitchen-status-zone,
+.recipe-step-9 .kitchen-status-zone,
+.recipe-step-10 .recipe-card-zone,
+.recipe-step-11 .kitchen-status-zone {
+  outline: 4px solid rgba(245, 197, 66, 0.42);
+  outline-offset: -4px;
+}
+
 .step-controls {
   display: flex;
   gap: 10px;
@@ -1085,8 +1538,26 @@ legend {
     border-bottom: 1px dashed #b5c1cf;
   }
 
+  .command-panel-zone,
+  .boxes-zone,
+  .recipe-card-zone {
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px dashed #b5c1cf;
+    border-bottom: 1px dashed #b5c1cf;
+  }
+
   .command-deck {
     top: 100px;
+  }
+
+  .board-commands,
+  .recipe-card {
+    top: 86px;
+  }
+
+  .storage-shelf {
+    top: 88px;
   }
 
   .speech-bubble {
