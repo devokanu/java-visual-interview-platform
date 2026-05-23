@@ -175,6 +175,7 @@ Two-lesson prototype deployed to Vercel for mobile testing.
 Initial Vercel build failed due to generated dependency/build output tracking; fixed by removing node_modules/dist from Git tracking and adding/updating .gitignore.
 Batch lesson factory workflow scaffolding created.
 Backlog-driven batch cursor system created.
+Shared AI orchestration board created to reduce GitHub issue overhead.
 17.2 Bekleyenler (Pending — sırada, engel yok)
 v0.3 dosyaları arası iç tutarlılık ikinci-tur kontrolü.
 README'nin SOURCE_INGESTION.md ile güncellenmesi (gerekirse).
@@ -193,6 +194,7 @@ Sıradaki Eylemler (Next Actions)
 Mobile test checklist ile mobil görsel sahneyi gerçek cihazlarda doğrula.
 Batch lesson factory workflow ile siradaki 3 derslik paketi issue tabanli hazirla; kalite review kapisini atlama.
 Backlog-driven cursor kuralına uy: AI sadece BATCH_CURSOR.md içindeki aktif 3 dersi işler.
+Küçük AI handoff adımlarında GitHub issue açmadan önce AI_ORCHESTRATION_BOARD.md kullanılmalıdır.
 Actual hosting/stack decisions remain open for later ADR; Vercel test deploy final hosting kararı değildir.
 Tam müfredat üretme; yeni ders ekleme; ADR/stack kararını ayrı turda ele al.
 
@@ -201,6 +203,6 @@ Bağlam Tazeleme Özeti (Context Refresh Summary)
 Son Güncelleyen / Tarih (Last Updated By / Date)
 
 Güncelleyen: Codex GPT-5.5 (Uygulama/Prototip)
-Sürüm: v0.3 + backlog-driven batch cursor note
-Tarih: 2026-05-23 (Backlog-driven batch cursor system created)
+Sürüm: v0.3 + shared AI orchestration board note
+Tarih: 2026-05-24 (Shared AI orchestration board created to reduce GitHub issue overhead)
 Not: Her anlamlı işten sonra bu alan güncellenmeli.

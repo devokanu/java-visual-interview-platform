@@ -65,4 +65,6 @@ Batch Lesson Factory iskeleti de eklendi: 3 derslik paketler için `.github/ISSU
 
 Backlog-driven batch sistemi eklendi: `CURRICULUM_LESSON_BACKLOG.md` tüm ders yol haritasını kısa başlık/status düzeyinde tutar; `BATCH_CURSOR.md` aktif 3 derslik üretim sırasını belirler. AI'lar backlog'u bağlam olarak okuyabilir, ancak yalnızca cursor'daki dersleri işler.
 
+Küçük AI handoff adımları için `AI_ORCHESTRATION_BOARD.md` kullanılmalıdır. Her küçük alt adım için GitHub issue açmak yerine board üzerindeki Assigned AI, Input Sources, Output Target ve Next Action alanları izlenir.
+
 Not: Bu iskeletler Vite + React'i final mimari kararı yapmaz; mevcut stack hâlâ prototip uygulama yığınıdır.
