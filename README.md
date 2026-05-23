@@ -1,1 +1,1 @@
-# Repository-name-java-visual-interview-platform
+java-visual-interview-platform
