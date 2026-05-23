@@ -63,4 +63,6 @@ Tekrarlanabilir AI çalışma akışı için şu iskeletler eklendi:
 
 Batch Lesson Factory iskeleti de eklendi: 3 derslik paketler için `.github/ISSUE_TEMPLATE/lesson_batch.yml`, `prompts/08-11`, `checklists/batch_lesson_quality_checklist.md` ve `workflows/BATCH_LESSON_FACTORY_WORKFLOW.md` kullanılır. Batch akışı kalite kapısını atlamaz; D30 progressive depth korunur.
 
+Backlog-driven batch sistemi eklendi: `CURRICULUM_LESSON_BACKLOG.md` tüm ders yol haritasını kısa başlık/status düzeyinde tutar; `BATCH_CURSOR.md` aktif 3 derslik üretim sırasını belirler. AI'lar backlog'u bağlam olarak okuyabilir, ancak yalnızca cursor'daki dersleri işler.
+
 Not: Bu iskeletler Vite + React'i final mimari kararı yapmaz; mevcut stack hâlâ prototip uygulama yığınıdır.

@@ -24,6 +24,7 @@ Vercel deployment preparation completed; actual deploy pending.
 Two-lesson prototype deployed to Vercel for mobile testing.
 Initial Vercel build failed due to generated dependency/build output tracking; fixed by removing node_modules/dist from Git tracking and adding/updating .gitignore.
 Batch lesson factory workflow scaffolding created.
+Backlog-driven batch cursor system created.
 
 Kullanıcı Tarafından Onaylananlar (What Was Approved by the User)
 
@@ -51,7 +52,7 @@ v0.3: GraalVM / Spring Native temel ön koşul değildir.
 
 Mevcut Görev (Current Task)
 Two-lesson prototype deployed to Vercel for mobile testing. İlk Vercel build, generated dependency/build output tracking nedeniyle başarısız oldu; node_modules/dist Git tracking'den çıkarılıp .gitignore eklenerek/güncellenerek düzeltildi.
-Batch lesson factory workflow scaffolding created. Sıradaki önerilen adım: mobile test checklist ile gerçek cihaz doğrulaması ve ardından 3 derslik ilk batch issue'sunu açmak. Mobil görsel sahne hâlâ gerçek cihaz testi gerektirir.
+Batch lesson factory workflow scaffolding created. Backlog-driven batch cursor system created. Sıradaki önerilen adım: mobile test checklist ile gerçek cihaz doğrulaması ve ardından BATCH_CURSOR.md içindeki M0-L03, M0-L04, M0-L05 için ilk içerik batch'ini açmak. Mobil görsel sahne hâlâ gerçek cihaz testi gerektirir.
 Not: Vercel test deploy final hosting kararı değildir. Vite + React şu an yalnızca prototip uygulama yığınıdır; final stack/hosting kararı açık kalır ve daha sonra ayrı ADR/DECISIONS turunda ele alınmalıdır.
 Gerekli Girdi Dosyaları (Required Input Files)
 
@@ -67,7 +68,7 @@ GAP_ANALYSIS (Gemini çıktısı, referans olarak — entegre edilmemiş öneril
 Beklenen Çıktı (Expected Output)
 
 Şimdi: mobile test checklist ile mobil görsel sahneyi gerçek cihazlarda doğrula.
-Sonra: Batch Lesson Factory ile 3 derslik ilk üretim issue'sunu aç; stack, hosting, content storage, progress tracking ve animation kararlarını ayrı ADR/architecture turunda ele al.
+Sonra: `BATCH_CURSOR.md` içindeki aktif 3 ders için backlog-driven batch üretim issue'sunu aç; stack, hosting, content storage, progress tracking ve animation kararlarını ayrı ADR/architecture turunda ele al.
 Yapılmayacak: Yeni ders eklemek, tam müfredat üretmek, ADR başlatmak veya final stack kararıymış gibi Vite + React'i kalıcılaştırmak.
 
 Kısıtlar (Constraints)
