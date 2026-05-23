@@ -20,6 +20,7 @@ M0-L02 final content candidate integrated into prototype.
 Minimal polish patch completed; build passed; M0-L01 → M0-L02 flow works; M0-L02 → M0-L03 placeholder works.
 M0-L01 → M0-L02 two-lesson prototype baseline accepted. Mobile visual stage still needs real-device testing.
 GitHub issue/workflow automation scaffolding created.
+Vercel deployment preparation completed; actual deploy pending.
 
 Kullanıcı Tarafından Onaylananlar (What Was Approved by the User)
 
@@ -46,8 +47,8 @@ v0.3: M27 Sistem Tasarımı Kuşak 6'da kalır; Kuşak 4 öncesi yalnızca köpr
 v0.3: GraalVM / Spring Native temel ön koşul değildir.
 
 Mevcut Görev (Current Task)
-GitHub issue/workflow automation scaffolding created. Issue templates, reusable prompts, checklists and AI workflows are now available for repeatable lesson/prototype work.
-Sıradaki önerilen adım: Vercel deployment hazırlığı ve mobile test checklist doğrulaması. Mobil görsel sahne hâlâ gerçek cihaz testi gerektirir.
+Vercel deployment preparation completed; actual deploy pending. README deploy ayarları güncel; mobile test checklist gerçek cihaz doğrulamasına hazır.
+Sıradaki önerilen adım: Vercel deploy yapılması ve mobile test checklist ile gerçek cihaz doğrulaması. Mobil görsel sahne hâlâ gerçek cihaz testi gerektirir.
 Not: Vite + React şu an yalnızca prototip uygulama yığınıdır; final stack kararı açık kalır ve daha sonra ayrı ADR/DECISIONS turunda ele alınmalıdır.
 Gerekli Girdi Dosyaları (Required Input Files)
 
@@ -62,7 +63,7 @@ GAP_ANALYSIS (Gemini çıktısı, referans olarak — entegre edilmemiş öneril
 
 Beklenen Çıktı (Expected Output)
 
-Şimdi: Vercel deployment hazırlığı için küçük, güvenli bir tur planla.
+Şimdi: Vercel deploy'u yapmadan önce son ayarları kontrol et ve deploy'u kullanıcı onayıyla başlat.
 Sonra: mobile test checklist ile mobil görsel sahneyi gerçek cihazlarda doğrula.
 Yapılmayacak: Yeni ders eklemek, tam müfredat üretmek, ADR başlatmak veya final stack kararıymış gibi Vite + React'i kalıcılaştırmak.
 

@@ -59,9 +59,9 @@ Onaylanmış Müfredat Yönü (Approved Curriculum Direction)
 Bkz. CURRICULUM_BLUEPRINT.md (v0.3'te Gemini boşluk analizinden seçilmiş eklemeler entegre edildi: CQRS/Event Sourcing, ileri DB iç yapıları, OIDC/SAML/RBAC/ABAC, gRPC/WebSocket, FinOps, opsiyonel GraalVM/Spring Native, Kuşak 4 öncesi mini sistem tasarımı köprüsü, M9/M10 sıra düzeltmesi). Şimdilik yalnızca üst düzey modül grupları ve ön koşul mantığı onaylandı. Tam ders dökümü henüz yapılmadı.
 Şu An Üzerinde Çalışılan Modül / Ders (Current Module / Lesson)
 
-Aşama: M0-L01 → M0-L02 baseline sonrası AI workflow scaffolding.
-Durum: GitHub issue/workflow automation scaffolding created. Issue templates, prompts, checklists ve workflow dokümanları eklendi. Mobil görsel sahne hâlâ gerçek cihaz testi gerektirir.
-Sıradaki: Vercel deployment hazırlığı ve mobile test checklist doğrulaması.
+Aşama: M0-L01 → M0-L02 baseline sonrası deploy hazırlığı.
+Durum: GitHub issue/workflow automation scaffolding created. Vercel deployment preparation completed; actual deploy pending. Mobil görsel sahne hâlâ gerçek cihaz testi gerektirir.
+Sıradaki: Vercel deploy yapılması ve mobile test checklist ile gerçek cihaz doğrulaması.
 
 Görsel ve Animasyon Kuralları (Visual and Animation Rules)
 Bkz. VISUAL_ANIMATION_SYSTEM.md (v0.3'te modül-grubu metaforları "başlangıç noktası" olarak çerçevelendi; her konu yine kendi özgün görseliyle ele alınır). Özet: jenerik şablon yasak; her konuya özgün görsel metafor; kod gösterilirken görsel ile senkron; görsel sahne ana öğretim alanıdır, süs değildir.
@@ -170,12 +170,13 @@ M0-L01 patched prototype direction P0 learning experience baseline olarak kabul 
 M0-L02 final content candidate integrated into prototype.
 M0-L01 → M0-L02 two-lesson prototype baseline accepted; minimal polish patch tamamlandı ve build geçti.
 GitHub issue/workflow automation scaffolding created.
+Vercel deployment preparation completed; actual deploy pending.
 17.2 Bekleyenler (Pending — sırada, engel yok)
 v0.3 dosyaları arası iç tutarlılık ikinci-tur kontrolü.
 README'nin SOURCE_INGESTION.md ile güncellenmesi (gerekirse).
 M0-L01 P0 baseline'ın hedef öğrenciyle veya temsilî kullanıcıyla deneyim kontrolü.
-Mobil görsel sahnenin gerçek cihazlarda test edilmesi.
-Vercel deployment hazırlığı ve mobile test checklist doğrulaması.
+Vercel deploy yapılması.
+Mobil görsel sahnenin mobile test checklist ile gerçek cihazlarda test edilmesi.
 17.3 Engelli / Açık (Blocked / Open — karar bekliyor)
 Teknik yığın kararı (O1) → final mimari/ADR turunu bekliyor; Vite + React yalnızca prototip uygulama yığınıdır.
 İçerik depolama yöntemi (O2).
@@ -186,8 +187,8 @@ Soft-check kademe sayısı (O7).
 
 Sıradaki Eylemler (Next Actions)
 
-Vercel deployment hazırlığını yap; stack kararını finalleştirme.
-Mobile test checklist hazırla ve mobil görsel sahneyi gerçek cihazlarda doğrula.
+Vercel deploy yap; stack kararını finalleştirme.
+Mobile test checklist ile mobil görsel sahneyi gerçek cihazlarda doğrula.
 Tam müfredat üretme; yeni ders ekleme; ADR/stack kararını ayrı turda ele al.
 
 Bağlam Tazeleme Özeti (Context Refresh Summary)
@@ -195,6 +196,6 @@ Bağlam Tazeleme Özeti (Context Refresh Summary)
 Son Güncelleyen / Tarih (Last Updated By / Date)
 
 Güncelleyen: Codex GPT-5.5 (Uygulama/Prototip)
-Sürüm: v0.3 + M0-L01→M0-L02 two-lesson baseline notu
-Tarih: 2026-05-23 (M0-L01→M0-L02 baseline kabulü)
+Sürüm: v0.3 + Vercel deployment preparation note
+Tarih: 2026-05-23 (Vercel deployment preparation completed; actual deploy pending)
 Not: Her anlamlı işten sonra bu alan güncellenmeli.

@@ -41,6 +41,16 @@ Tam müfredat hâlâ üretilmedi. Vite + React mevcut prototip uygulama yığın
 2. `checklists/mobile_test_checklist.md` ile gerçek mobil cihaz testi çalıştır.
 3. Sonra stack, content storage, progress tracking ve animation tekniği için ADR/architecture tartışmasını başlat.
 
+## Vercel Deploy Hazırlığı
+
+Önerilen ilk deploy hedefi: Vercel Free/Hobby. Bu yalnızca prototipi paylaşılabilir hale getirmek içindir; Vite + React final mimari karar değildir.
+
+- Install command: `npm install`
+- Build command: `npm run build`
+- Output directory: `dist`
+
+Deploy sonrası gerçek telefonda şu akış kontrol edilmelidir: M0-L01 → M0-L02 → M0-L03 placeholder. Mobil test için `checklists/mobile_test_checklist.md` kullanılmalıdır.
+
 ## AI Workflow Automation
 
 Tekrarlanabilir AI çalışma akışı için şu iskeletler eklendi:
