@@ -4,7 +4,7 @@ Bu dosya Claude, Gemini ve Codex arasında küçük yerel devirleri koordine etm
 
 ## Current Milestone
 
-M0-B01 batch content cleanup and approval.
+M0-B01 approved content storage and backlog/cursor update.
 
 ## Active Batch
 
@@ -14,49 +14,55 @@ M0-B01 batch content cleanup and approval.
 
 ## Current Task
 
-Clean Markdown formatting for M0-B01 patched batch.
+Store approved M0-B01 clean lesson content into stable lesson content files and update backlog/cursor status.
 
 ## Assigned AI
 
-Claude
+Codex
 
 ## Input Sources
 
-- Issue #6 patched batch output
-- Issue #7 review result
-- LESSON_TEMPLATE.md
-- BATCH_CURSOR.md
+- content/batches/M0-B01_CLEAN.md
+- content/batches/M0-B01_CLEAN_REVIEW.md
 - CURRICULUM_LESSON_BACKLOG.md
+- BATCH_CURSOR.md
+- PROJECT_CONTEXT.md
+- AI_HANDOFF.md
 
 ## Output Target
 
-content/batches/M0-B01_CLEAN.md
+- content/lessons/m0/M0-L03.md
+- content/lessons/m0/M0-L04.md
+- content/lessons/m0/M0-L05.md
+- updated CURRICULUM_LESSON_BACKLOG.md
+- updated BATCH_CURSOR.md
 
 ## Rules / Do Not Do
 
 - Do not rewrite lesson meaning.
 - Do not change lesson IDs or titles.
 - Do not generate new lessons.
-- Only clean Markdown formatting.
-- Keep valid fenced Java code blocks.
-- Keep valid Markdown tables.
-- Preserve D30: Cognitive accessibility is not content simplification; it is progressive depth design.
 - Do not modify `src/`.
-- Do not integrate lessons.
+- Do not integrate into prototype yet.
+- Only split/store approved Markdown and update backlog/cursor status.
+- Set M0-L03, M0-L04, M0-L05 status to APPROVED or CONTENT_APPROVED according to existing backlog status conventions.
+- Move BATCH_CURSOR phase to READY_FOR_INTEGRATION.
+- Do not advance cursor to the next batch yet; cursor advances only after prototype integration + QA.
+- Preserve D30: Cognitive accessibility is not content simplification; it is progressive depth design.
 - Do not start ADR.
 - Do not deploy.
 
 ## Review Status
 
-Issue #7 result: PATCH BEFORE STORAGE.
+APPROVE_FOR_STORAGE.
 
 - M0-L03: PASS.
 - M0-L04: PASS.
-- M0-L05: PATCH NEEDED due to Markdown formatting.
+- M0-L05: PASS.
 
 ## Next Action
 
-After Claude creates `content/batches/M0-B01_CLEAN.md`, Gemini or Claude reviews the clean file. If approved, Codex stores lesson files and updates backlog/cursor status.
+After storage is complete, Codex will integrate M0-B01 into the prototype in a separate task.
 
 ## Status Values
 

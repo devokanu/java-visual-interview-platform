@@ -2,7 +2,7 @@
 
 Batch size: 3
 
-Current phase: CONTENT_GENERATION
+Current phase: READY_FOR_INTEGRATION
 
 Next batch:
 
