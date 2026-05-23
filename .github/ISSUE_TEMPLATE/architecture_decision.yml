@@ -1,0 +1,82 @@
+name: Architecture Decision
+description: Ayrı ADR/DECISIONS turu için mimari karar hazırlığı
+title: "[Architecture Decision] "
+labels: ["architecture", "adr", "decision"]
+body:
+  - type: input
+    id: ai_owner
+    attributes:
+      label: AI Owner
+      placeholder: Claude + Codex
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      placeholder: "Açık mimari/stack sorusu için karar önerisi hazırla."
+    validations:
+      required: true
+  - type: textarea
+    id: context_files
+    attributes:
+      label: Context Files
+      value: |
+        - PROJECT_CONTEXT.md
+        - AI_HANDOFF.md
+        - DECISIONS.md
+        - README.md
+        - package.json
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Inputs
+      placeholder: "Karar verilecek konu, seçenekler, kısıtlar."
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      value: |
+        - Bu template yalnızca ADR/karar turunda kullanılır.
+        - Prototip stack'i final karar gibi yazma.
+        - D30 ve hedef öğrenci profili kararın merkezinde kalır.
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Task
+      placeholder: "Seçenekleri karşılaştır, öneri sun, kabul edilirse DECISIONS.md satırı hazırla."
+    validations:
+      required: true
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of Done
+      value: |
+        - En az 2 seçenek karşılaştırıldı.
+        - Hedef öğrenci ve içerik işletimi etkisi yazıldı.
+        - Kabul edilirse DECISIONS.md güncellemesi hazır.
+        - App code değiştirilmedi.
+    validations:
+      required: true
+  - type: textarea
+    id: output_required
+    attributes:
+      label: Output Required
+      placeholder: "ADR önerisi veya DECISIONS.md yaması."
+    validations:
+      required: true
+  - type: dropdown
+    id: memory_update
+    attributes:
+      label: Memory Update Required?
+      options:
+        - "Evet: karar kabul edilirse PROJECT_CONTEXT.md + AI_HANDOFF.md + DECISIONS.md"
+        - "Hayır: sadece araştırma/öneri"
+    validations:
+      required: true

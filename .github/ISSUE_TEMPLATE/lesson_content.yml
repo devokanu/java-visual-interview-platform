@@ -1,0 +1,93 @@
+name: Lesson Content
+description: LESSON_TEMPLATE'e uygun yeni veya mevcut tek ders içeriği üretimi
+title: "[Lesson Content] M__-L__ - "
+labels: ["lesson", "content", "ai-workflow"]
+body:
+  - type: input
+    id: ai_owner
+    attributes:
+      label: AI Owner
+      description: Örn. Claude
+      placeholder: Claude
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: Bu issue hangi tek ders çıktısını hedefliyor?
+      placeholder: "M0-L03 için LESSON_TEMPLATE'e uygun final içerik adayı üret."
+    validations:
+      required: true
+  - type: textarea
+    id: context_files
+    attributes:
+      label: Context Files
+      value: |
+        - PROJECT_CONTEXT.md
+        - AI_HANDOFF.md
+        - DECISIONS.md
+        - LESSON_TEMPLATE.md
+        - VISUAL_ANIMATION_SYSTEM.md
+        - INTERVIEW_SYSTEM.md
+        - SOURCE_INGESTION.md
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Inputs
+      description: Ders kodu, başlık, önceki ders, metafor, kaynaklar.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      value: |
+        - Tam müfredat üretme.
+        - Tek ders üret.
+        - D30'u koru: bilişsel erişilebilirlik içerik basitleştirme değil, progressive depth design'dır.
+        - Türkçe yaz; teknik terimler English kalabilir.
+        - Soft-check kullan; hard-lock kullanma.
+        - Görsel metafor konuya özgü olmalı; jenerik diyagram yok.
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Task
+      description: Yapılacak içerik işi.
+    validations:
+      required: true
+  - type: textarea
+    id: dod
+    attributes:
+      label: Definition of Done
+      value: |
+        - LESSON_TEMPLATE alanları dolduruldu.
+        - Visual Mode konuya özgü ve adım kontrollü.
+        - Code Mode kısa ve görsel ile senkron.
+        - Interview Mode ezber değil muhakeme odaklı.
+        - Micro-assessment ve soft-check var.
+        - Depth Ladder kısa ve uygun.
+    validations:
+      required: true
+  - type: textarea
+    id: output_required
+    attributes:
+      label: Output Required
+      placeholder: "Markdown ders dosyası veya final content candidate."
+    validations:
+      required: true
+  - type: dropdown
+    id: memory_update
+    attributes:
+      label: Memory Update Required?
+      options:
+        - "Hayır"
+        - "Evet: PROJECT_CONTEXT.md"
+        - "Evet: PROJECT_CONTEXT.md + AI_HANDOFF.md"
+        - "Evet: PROJECT_CONTEXT.md + AI_HANDOFF.md + DECISIONS.md"
+    validations:
+      required: true
